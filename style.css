@@ -1,3 +1,8 @@
+html,
+body {
+    height: 100%;
+}
+
 body {
     position: relative;
     background-color: rgba(0, 0, 0, 90%);
@@ -5,8 +10,7 @@ body {
 }
 
 .container {
-    width: 100vw;
-    height: 100vh;
+    min-height: 100%;
     margin: auto;
     display: flex;
     flex-direction: row-reverse;
@@ -23,8 +27,60 @@ body {
 .form-start {
     width: 75%;
     font-weight: 500;
-    font-size: 2rem;
-    margin-top: 150px;
+    font-size: 1.7rem;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+.form-middle {
+    background-color: white;
+    color: rgba(0, 0, 0, 70%);
+    box-shadow: 3px 5px 15px gray;
+}
+
+.form-inputs {    
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+    padding: 0 20px 20px 0;
+
+}
+
+.form-row {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding: 0 80px 25px 0;
+}
+
+input {
+    border: 2px solid #E5E7EB;
+    border-radius: 5px;
+    padding: 8px;
+    width: 250px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid blue;
+    box-shadow: 2px 2px 10px gray;
+}
+
+input[type="password"]:invalid {
+    border: 1px solid red;
+}
+
+input[type="password"]:valid {
+    background-color: #e8f0fe;
+}
+
+span::before {
+    color: red;
+    content: "* Passwords do not match";
+    position: absolute;
+    bottom: 0;
+    font-size: 0.8rem;
 }
 
 .image-container {
@@ -61,16 +117,21 @@ body {
 footer {
     position: absolute;
     bottom: 0;
-    /* left: 210px; */
 
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     padding: 10px;
 }
 
-.form-container > div {
+.form-start,
+.form-end,
+h2,
+.form-inputs {
     margin-left: 80px;
+}
+
+.form-end {
+    margin-top: 20px;
 }
 
 a {
