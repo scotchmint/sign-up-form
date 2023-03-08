@@ -75,7 +75,7 @@ input[type="password"]:valid {
     background-color: #e8f0fe;
 }
 
-span::before {
+.pass-dont-match::before {
     color: red;
     content: "* Passwords do not match";
     position: absolute;
@@ -137,4 +137,18 @@ h2,
 a {
     color: white;
     margin: 0 5px;
+}
+
+.login-text a {
+    text-decoration: none;
+    color: green;
+    
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    background-color: #596D48;
+    color: white;
+    padding: 15px 40px;
 }
