@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./normalize.css">
     <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,500;1,500&display=swap" rel="stylesheet">
@@ -27,31 +28,32 @@
                     <div class="form-inputs">
                         <div class="form-row">
                             <label for="first-name">FIRST NAME</label>
-                            <input type="text" id="first-name" name="username">
+                            <input type="text" id="first-name" name="username" maxlength="20" placeholder="John" required>
                         </div>
                         <div class="form-row">
                             <label for="last-name">LAST NAME</label>
-                            <input type="text" id="last-name" name="username">
+                            <input type="text" id="last-name" name="username" maxlength="20" placeholder="Doe" required>
                         </div>
                         <div class="form-row">
                             <label for="mail">EMAIL</label>
-                            <input type="email" id="mail" name="usermail">
+                            <input type="email" id="mail" name="usermail" placeholder="example@site.com" required>
                         </div>
                         <div class="form-row">
                             <label for="phone-number">PHONE NUMBER</label>
-                            <input type="tel" id="phone-number" name="userphone">
+                            <input type="tel" id="phone-number" name="userphone" placeholder="(###) ### #####" required>
                         </div>
                         <div class="form-row">
                             <label for="password">PASSWORD</label>
-                            <input type="password" id="password" name="userpassword" required>
-                            <span class="pass-dont-match"></span>
+                            <input type="password" id="password" name="userpassword" minlength="8"
+                            placeholder="Enter more than 8 characters" pattern="(\d|\D)+" required>
+                            <span class="pass-match-check"></span>
                         </div>
                         <div class="form-row">
                             <label for="confirm-password">CONFIRM PASSWORD</label>
-                            <input type="password" id="confirm-password" name="user_conifrmpassword" required>
+                            <input type="password" id="confirm-password" name="user_conifrmpassword" minlength="8"
+                            placeholder="Confirm Password"  pattern="(\d|\D)+" required>
                         </div>
                     </div>
-
                     
                 </form>
             </div>

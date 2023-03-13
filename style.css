@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-    min-height: 100%;
+    height: 100%;
     margin: auto;
     display: flex;
     flex-direction: row-reverse;
@@ -19,7 +19,6 @@ body {
 .form-container {
     background-color: rgba(255, 255, 255, 95%);
     width: 70%;
-
     display: flex;
     flex-direction: column;
 }
@@ -67,20 +66,19 @@ input:focus {
     box-shadow: 2px 2px 10px gray;
 }
 
-input[type="password"]:invalid {
+.pass-match-check {
+    color: red;
+    position: absolute;
+    bottom: 7px;
+    font-size: 0.8rem;
+}
+
+input:invalid {
     border: 1px solid red;
 }
 
-input[type="password"]:valid {
-    background-color: #e8f0fe;
-}
-
-.pass-dont-match::before {
-    color: red;
-    content: "* Passwords do not match";
-    position: absolute;
-    bottom: 0;
-    font-size: 0.8rem;
+input:valid {
+    border: 1px solid green;
 }
 
 .image-container {
@@ -142,7 +140,6 @@ a {
 .login-text a {
     text-decoration: none;
     color: green;
-    
 }
 
 button {
@@ -151,4 +148,5 @@ button {
     background-color: #596D48;
     color: white;
     padding: 15px 40px;
+    cursor: pointer;
 }
